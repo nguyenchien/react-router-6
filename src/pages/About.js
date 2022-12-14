@@ -1,11 +1,13 @@
 import {Link} from 'react-router-dom';
+import Navbar from '../component/Navbar';
 
 const About = () => {
   return (
-    <section className='section'>
-      <h2>About</h2>
-      <Link to='/' className='btn'>back to home</Link>
-    </section>
+    <>
+      <section className='section'>
+        <h2>About</h2>
+      </section>
+    </>
   );
 };
 export default About;
