@@ -8,8 +8,8 @@ const SingleProduct = () => {
   return (
     <section className='section product'>
       <img src={image} alt={name} />
-      <h2>{name}</h2>
-      <Link to='/products' className="btn">back to list</Link>
+      <h5>{name}</h5>
+      <Link to='/products' className="btn">product list</Link>
     </section>
   );
 };

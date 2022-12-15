@@ -14,6 +14,10 @@ const StyledNavbar = () => {
       <NavLink to='/products'
       className={({isActive})=>isActive ? 'link active' : 'link'}
       >products</NavLink>
+      
+      <NavLink to='/login'
+      className={({isActive})=>isActive ? 'link active' : 'link'}
+      >login</NavLink>
     </nav>
   )
 }
