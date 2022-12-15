@@ -5,7 +5,6 @@ const Products = () => {
   return (
     <>
       <section className='section'>
-        <h2>products list</h2>
         <ul style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'

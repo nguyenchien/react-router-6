@@ -8,6 +8,7 @@ import SingleProduct from './pages/SingleProduct';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './pages/ProtectedRoute';
+import ShareProductLayout from './pages/ShareProductLayout';
 import { useState } from 'react';
 
 function App() {
@@ -18,14 +19,19 @@ function App() {
         <Route path='/' element={<ShareLayout />}>  
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
-          <Route path='products' element={<Products />} />
-          <Route path='products/:productID' element={<SingleProduct />} />
+          
+          <Route path='products' element={<ShareProductLayout/>}>
+            <Route index element={<Products />} />
+            <Route path=':productID' element={<SingleProduct />} />
+          </Route>
+          
           <Route path='login' element={<Login setUser={setUser} />} />
           <Route path='dashboard' element={
             <ProtectedRoute user={user}>
               <Dashboard user={user} />
             </ProtectedRoute>
           } />
+          
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
